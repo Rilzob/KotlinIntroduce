@@ -23,7 +23,12 @@ class HelloActivity : AppCompatActivity() {
         val colorTable = listOf("#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff")
 
         verticalLayout {
+            padding = dip(20)
             val name = editText()
+            name.lparams(width = matchParent){
+                topMargin = dip(20)
+                bottomMargin = dip(30)
+            }
             button("Say Hello") {
                 this.onClick {
                     val randomIndex = (Math.random() * colorTable.size).toInt()
